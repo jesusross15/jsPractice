@@ -19,8 +19,13 @@ function showSuccess(input) {
 }
 
 // Email regex
-function isValidEmail(email) {
-    return email.includes('@');
+function checkEmail(input) {
+    const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;;
+    if(re.test(input.value.trim())) {
+        showSuccess(input);
+    } else {
+        showError(input, "Email is not valid")
+    }
 }
 
 // Event Listeners (Let's refactor this code)
@@ -66,6 +71,23 @@ function checkRequired(inputArray) {
     });
 }
 
+// Check input length
+function checkLength(input, min, max) {
+    if(input.value.length < min) {
+        showError(input, `${getInputFieldName(input)} must be at least ${min} characters`);
+    }  else if(input.value.length > max) {
+        showError(input, `${getInputFieldName(input)} must be less than ${max} characters`)
+    }
+}
+
+// Check password match
+function checkPasswordMatch(input1, input2) {
+    if(input1.value !== input2.value) {
+        showError(input2, "Passwords do not match")
+    }
+}
+
+
 // Getting the input field name
 function getInputFieldName(input) {
     return input.id.charAt(0).toUpperCase() + input.id.slice(1);
@@ -76,4 +98,8 @@ form.addEventListener("submit", function(e) {
     e.preventDefault();
     // instead of passing a single input let's pass an array of all the inputs that we want
     checkRequired([username, email, password, password2])
+    checkLength(username, 3, 15);
+    checkLength(password, 6, 20)
+    checkEmail(email);
+    checkPasswordMatch(password, password2);
 });
