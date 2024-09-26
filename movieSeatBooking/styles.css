@@ -23,7 +23,7 @@ body {
 }
 
 .movie-container select {
-    background-color: wheat;
+    background-color: whitesmoke;
     border: 0;
     border-radius: 5px;
     font-size: 10px;
@@ -85,9 +85,21 @@ body {
 
 .showcase li small {
     margin-left: 2px;
-    
 }
 
 .row {
     display: flex;
+}
+
+
+.screen {
+    background-color: white;
+    height: 60px;
+    width: 100%;
+    margin: 15px 0px;
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.6);
+}
+
+p.text span{
+    color: aquamarine;
 }
