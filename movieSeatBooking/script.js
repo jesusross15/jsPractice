@@ -6,7 +6,7 @@ const count = document.getElementById("count");
 const total = document.getElementById("total");
 const movieSelect = document.getElementById("movie");
 
-const ticketPrice = +movieSelect.value;
+let ticketPrice = +movieSelect.value;
 
 console.log(typeof ticketPrice);
 
@@ -14,12 +14,20 @@ console.log(typeof ticketPrice);
 function updateSelectedCount() {
     const selectedSeats = document.querySelectorAll(".row .seat.selected");
     
-    // const selectedSeatsCount = selectedSeats.length;
-
-    // count.innerText = selectedSeatsCount;
-    // total.innerText = selectedSeatsCount * ticketPrice;
+    const selectedSeatsCount = selectedSeats.length
+;
+    count.innerText = selectedSeatsCount;
+    total.innerText = selectedSeatsCount * ticketPrice;
 }
 
+// Movie selection event listener
+movieSelect.addEventListener("change", function(e) {
+    ticketPrice = +e.target.value
+    updateSelectedCount();
+})
+
+
+// Seat selection event listener
 container.addEventListener("click", e => {
     if (
         e.target.classList.contains("seat") && 
