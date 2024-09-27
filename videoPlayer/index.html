@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Custom Video Player</title>
+    <link rel="stylesheet" href="styles.css">
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <script type="text/javascript" src="script.js" defer></script>
+    
+</head>
+<body>
+    <h1>Custom Video Player</h1>
+    <video controls 
+        src="/videoPlayer/boat.mp4" 
+        id="video" class="screen" 
+        poster="/videoPlayer/poster.png">
+    </video>
+
+    <div class="controls">
+        <button class="button" id="play">
+            <i class="fa fa-play fa-2x"></i>
+        </button>
+        <button class="button" id="stop">
+            <i class="fa fa-stop fa-2x"></i>
+        </button>
+    </div>    
+
+</body>
+</html>
