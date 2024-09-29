@@ -1,0 +1,46 @@
+:root {
+    --primary-color: #4ba477;
+    --secondary-color: #8acce7;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 15px;
+}
+
+h1 {
+    color: var(--primary-color);
+}
+
+p {
+    color: var(--secondary-color);
+}
+
+.button {
+    color: #fff;
+    background-color: var(--primary-color);
+    cursor: pointer;
+    border-radius: 7px;
+    font-size: 20px bold ;
+    padding: 5px 12px;
+}
+
+.img {
+    width: 300px;
+}
+
+.currency {
+    padding: 40px 0px;
+    
+}
