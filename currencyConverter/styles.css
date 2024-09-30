@@ -42,5 +42,21 @@ p {
 
 .currency {
     padding: 40px 0px;
-    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.currency select {
+    padding: 10px 20px 20px 10px;
+    appearance: none;
+    border: 1px solid gray;
+    font-size: 16px;
+}
+
+.currency input {
+    border: 0;
+    background: transparent;
+    font-size: 35px;
+    text-align: right;
 }
