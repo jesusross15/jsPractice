@@ -8,7 +8,8 @@
 }
 
 body {
-    background-color: #000;
+    /* I'm putting the background this color for now because it's easier to work around with */
+    background-color: #5e5e5e;
     display: flex;
     font-family: Arial, Helvetica, sans-serif;
     flex-direction: column;
@@ -28,8 +29,9 @@ p {
 }
 
 .button {
-    color: #fff;
-    background-color: var(--primary-color);
+    color: #000;
+    font-weight: bold;
+    background-color: var(--secondary-color);
     cursor: pointer;
     border-radius: 7px;
     font-size: 20px bold ;
@@ -48,10 +50,13 @@ p {
 }
 
 .currency select {
+    color: var(--primary-color);
+    font-weight: bold;
     padding: 10px 20px 20px 10px;
     appearance: none;
     border: 1px solid gray;
     font-size: 16px;
+    background: transparent;
 }
 
 .currency input {
@@ -59,4 +64,22 @@ p {
     background: transparent;
     font-size: 35px;
     text-align: right;
+}
+
+.swap-rate-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+rate {
+    color: var(--primary-color-color);
+    font-size: 14px;
+    padding: 0 10px;
+}
+
+@media (max-width: 600px) {
+    .currency input {
+        width: 200px;
+    }
 }
